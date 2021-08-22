@@ -1,30 +1,42 @@
 #include "holberton.h"
-
+/**
+ * Process_Input - takes input string, locates spaces
+ * in the string and creates an array of strings
+ * @input: input to be split into array of strings
+ * Return: argument list based on input
+ */
 char **Process_Input(char *input)
 {
+	/*
 	const char sep = " ";
-	int i = 0;
-	char *token;
-	char **args;
+	char *token; */
+	/* Placeholder Code */
+	char **args = malloc(4 * sizeof(char*));
 
-	token = strtok(input, sep);
+	args[0] = "/bin/ls";
+	args[1] = "-l";
+	args[2] = "/usr/";
+	args[3] = NULL;
+	
 
-	while (token)
-	{
-		args[i] = token;
-		token = strok(NULL, sep);
-		i++;
-	}
 	return (args);
 }
+/**
+ * Take_Input - gets input from the user
+ * Return: returns user input
+ */
 char *Take_Input()
 {
 	char *input = NULL;
-	ssize_t bufsize = 0;/* With getline() it should set a bufsize for us */
+	ssize_t bufsize = 0;
 
-	if(getline(&input, &bufsize, stdin) == -1)
+	input = malloc(bufsize * sizeof(char));
+	if (!input)
 	{
-
+		printf("Memory Allocation Error!\n");
+		exit(EXIT_FAILURE);
 	}
+	getline(&input, &bufsize, stdin);
 
+	return (input);
 }

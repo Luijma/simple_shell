@@ -10,11 +10,16 @@ int main(void)
 	
 	do
 	{
+		Display_Prompt();
 		input = Take_Input();
 		arguments = Process_Input(input);
 		Execute_Commands(arguments);
 		
-	} while(true);
+	} while(1);
 
 	return (0);
+}
+void Display_Prompt()
+{
+	printf("#cisfun$ ");
 }
