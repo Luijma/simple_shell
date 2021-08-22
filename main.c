@@ -5,5 +5,16 @@
  */
 int main(void)
 {
+	char *input;
+	char **arguments;
+	
+	do
+	{
+		input = Take_Input();
+		arguments = Process_Input(input);
+		Execute_Commands(arguments);
+		
+	} while(true);
+
 	return (0);
 }
