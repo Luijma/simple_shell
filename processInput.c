@@ -13,10 +13,9 @@ char **Process_Input(char *input)
 	/* Placeholder Code */
 	char **args = malloc(4 * sizeof(char*));
 
-	args[0] = "/bin/ls";
-	args[1] = "-l";
-	args[2] = "/usr/";
-	args[3] = NULL;
+	args[0] = "/bin/sh";
+	args[1] = input;
+	args[2] = NULL;
 	
 
 	return (args);

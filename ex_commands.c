@@ -7,7 +7,7 @@ void Execute_Commands(char **args)
 
 	if (!pid)
 	{
-		if (execve(args[0], args, NULL) == -1)
+		if (execve("/bin/sh", args, NULL) == -1)
 		{
 			perror("Error:");
 		}
