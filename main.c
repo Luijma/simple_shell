@@ -7,19 +7,27 @@ int main(void)
 {
 	char *input;
 	char **arguments;
-	
-	do
+	int flag = 1;
+
+	while (flag)
 	{
 		Display_Prompt();
 		input = Take_Input();
+		if (strncmp(input, "exit", 4) == 0)
+		{
+			flag = 0;
+			exit(0);
+		}
 		arguments = Process_Input(input);
 		Execute_Commands(arguments);
-		
-	} while(1);
+	}
 
 	return (0);
 }
-void Display_Prompt()
+/**
+ * Display_Prompt - function displays prompt message
+ */
+void Display_Prompt(void)
 {
-	printf("#cisfun$ ");
+	printf("$ ");
 }
