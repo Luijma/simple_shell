@@ -1,5 +1,9 @@
 #include "holberton.h"
 
+/**
+ * Execute_Commands - function
+ * @args: parameter
+ */
 void Execute_Commands(char **args)
 {
 	int pid = fork();
@@ -9,7 +13,7 @@ void Execute_Commands(char **args)
 	{
 		if (execve(args[0], args, NULL) == -1)
 		{
-			perror("MY Error:");
+			perror("Error");
 		}
 	}
 	else

@@ -13,10 +13,10 @@ int main(void)
 	{
 		Display_Prompt();
 		input = Take_Input();
-		if (strncmp(input, "exit", 4) == 0)
+		if (_strcmp(input, "exit") == 0)
 		{
 			flag = 0;
-			exit(0);
+			return (0);
 		}
 		arguments = Process_Input(input);
 		Execute_Commands(arguments);
