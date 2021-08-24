@@ -11,7 +11,8 @@ void Execute_Commands(char **args)
 		{
 			perror("Error:");
 		}
-	} else
+	}
+	else
 	{
 		wait(&status);
 	}
