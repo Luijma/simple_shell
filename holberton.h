@@ -12,11 +12,13 @@
 
 /* Prototypes */
 
+int _putchar(char c);
 char *Take_Input(void);
 char **Process_Input(char *input);
 void Execute_Commands(char **args);
 void Display_Prompt(void);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
+void path_convert(char **env);
 
 #endif /* _HOLBERTON_H_ */

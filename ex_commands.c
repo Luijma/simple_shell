@@ -6,10 +6,10 @@
  */
 void Execute_Commands(char **args)
 {
-	int pid = fork();
+	pid_t pid = fork();
 	int status;
 
-	if (!pid)
+	if (pid == 0)
 	{
 		if (execve(args[0], args, NULL) == -1)
 		{
