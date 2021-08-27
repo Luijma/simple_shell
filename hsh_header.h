@@ -15,12 +15,13 @@
 /* processinput.c */
 char *take_input(void);
 char **process_input(char *input, char *separator);
+char **path_convert(char **env);
 void display_prompt(void);
 
 /* ex_commands.c */
 void execute(char *file_name, char **env);
 char *get_path(char *arg, char **env);
-char **path_convert(char **env);
+int check_if_path(char *command);
 
 /* string_handling.c */
 int _putchar(char c);

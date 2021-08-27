@@ -37,13 +37,35 @@ char *get_path(char *arg, char **env)
 
 	for (i = 0; env[i] != NULL; i++)
 	{
-		commandPath = str_concat(env[i], "/");
-		fullPath = str_concat(commandPath, arg);
-
-		if (access(fullPath, X_OK) == 0)
+		if (check_if_path(arg) == 0)
 		{
-			return (fullPath);
+			commandPath = str_concat(env[i], "/");
+			fullPath = str_concat(commandPath, arg);
+			if (access(fullPath, X_OK) == 0)
+				return (fullPath);
+		}
+		else
+		{
+			if (access(arg, X_OK) == 0)
+				return (arg);
 		}
 	}
 	return (NULL);
+}
+
+/**
+ * check_if_path - function checks use of PATH directory
+ * @command: directory in use
+ * Return: 0
+ */
+int check_if_path(char *command)
+{
+	int count;
+
+	for (count = 0 ; command[count] != '\0' ; count++)
+	{
+		if (command[count] == '/')
+			return (1);
+	}
+	return (0);
 }

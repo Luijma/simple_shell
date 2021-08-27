@@ -10,7 +10,8 @@ char *take_input(void)
 	char *input = NULL;
 	size_t bufsize = 0;
 
-	display_prompt();
+	if (isatty(STDIN_FILENO) == 1)
+		display_prompt();
 
 	length = getline(&input, &bufsize, stdin);
 
