@@ -1,0 +1,38 @@
+.\" Manpage for simple_shell
+.TH Simple_shell 1 "26 August 2021" "1.0" "Simple shell man page"
+.SH NAME
+simple_shell - UNIX command interpreter
+
+.SH SYNOPSIS
+.B ./<NAME OF EXECUTABLE>
+
+Compiled using: gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o <name of executable>
+
+.SH DESCRIPTION
+simple_shell interprets and executes basic UNIX commands with arguments. It is a project assigned with certain requirements and restrictions by Holberton School with the goal of recreating a UNIX shell.
+
+The executable displays a prompt, waits for user input, interprets it and executes if it is valid.
+
+.SH Examples
+.B ./hsh
+
+$ ls
+
+This will list files in the current directory
+
+$ ls -la
+
+This will list all files in the current directory in long format
+
+$ echo Hello
+
+This will print out input
+
+$ pwd
+
+This will print the working directory
+
+.SH Authors
+Jose J Torres Abad
+
+Luis Manuel Rivera Sanchez
