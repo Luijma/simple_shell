@@ -2,21 +2,19 @@
 
 <p align="center"> </p>
 
-## Links
-
-- [Repository](https://github.com/Luijma/simple_shell "<simple_shell> Repo")
-
 ## Description
 Simple shell interprets and executes basic UNIX commands with arguments. It is a project assigned with certain requirements and restrictions by Holberton School with the goal of recreating a UNIX shell.
 
 The executable displays a prompt, waits for user input, interprets it and executes if it is valid.
 
-## Built with
-- C
+## How to compile and use
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
-## Example
 ./hsh
 
+$ [command] [arguments]
+
+## Example
 $ ls
 
 This will list files in the current directory
